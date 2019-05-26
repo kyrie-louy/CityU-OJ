@@ -33,9 +33,7 @@ bool com(const vertex &p1, const vertex &p2)
         return temp > 0;
     }
 }
-bool com2(const vertex& v1, const vertex& v2){
-    return v1.idx < v2.idx;
-}
+
 vector<vertex> graham_scan(int n)
 {
 	vector<vertex> ch;
@@ -85,7 +83,6 @@ int main(){
 
         for(int i=0;i<n;i++){
             scanf("%d%d",&node[i].x,&node[i].y);
-            node[i].idx=i;
         }
         vector<vertex> res = graham_scan(n-1);
         //sort(res.begin(),res.end(),com2);
